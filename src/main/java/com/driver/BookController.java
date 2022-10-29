@@ -120,7 +120,7 @@ public class BookController {
     // pass genre name as request param
     // getBooksByGenre()
     @GetMapping("/get-books-by-genre")
-    public ResponseEntity getBookByGenre ( @RequestParam("genre") String genre) {
+    public ResponseEntity getBooksByGenre ( @RequestParam("genre") String genre) {
         for(Book b : bookList) {
             if(b.getGenre().equals(genre)) {
                 return new ResponseEntity<>(b, HttpStatus.OK);
